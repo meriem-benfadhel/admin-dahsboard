@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Update Client</h1>
+
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <input [(ngModel)]="client.name" type="text" class="form-control m-2" placeholder="name">
+      <input [(ngModel)]="client.description" type="text" class="form-control m-2" placeholder="description">
+      <input [(ngModel)]="client.entreprise" type="text" class="form-control m-2" placeholder="entreprise">
+      <input [(ngModel)]="client.titreprojet" type="text" class="form-control m-2" placeholder="titre projet">
+      <input (change)="selectImage($event)" type="file" name="" id="" class="form-control m-2" placeholder="image">
+
+
+
+      <button (click)="update()" class="btn btn-dark m-2 form-control">Save</button>
+    </div>
+  </div>
+
+</div>

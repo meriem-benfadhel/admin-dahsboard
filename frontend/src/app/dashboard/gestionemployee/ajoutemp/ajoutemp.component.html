@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Ajout Employee</h1>
+
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <input [(ngModel)]="employee.fullname" type="text" class="form-control m-2" placeholder="fullname">
+      <input [(ngModel)]="employee.email" type="email" class="form-control m-2" placeholder="E-mail">
+      <input [(ngModel)]="employee.tel" type="text" class="form-control m-2" placeholder="tel:">
+      <input [(ngModel)]="employee.address" type="text" class="form-control m-2" placeholder="address">
+      <input (change)="selectImage($event)" type="file" name="" id="" class="form-control m-2" placeholder="image">
+
+      <select [(ngModel)]="employee.idDep" name="" id="" class="form-select m-2">
+        <option *ngFor="let dep of departements" [value]="dep._id">{{ dep.name }}</option>
+      </select>
+
+      <button (click)="ajout()" class="btn btn-dark m-2 form-control">Create</button>
+    </div>
+  </div>
+
+</div>
